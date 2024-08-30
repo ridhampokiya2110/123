@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GOOGLE LOGIN FORM</title>
+    <style>
+        body {
+            background-image: radial-gradient(rgb(26, 135, 182),rgb(8, 94, 147));
+        }
+
+        .center {
+            display: block;
+            border: 3px solid;
+            border-radius: 20px;
+            box-shadow: 15px 13px 15px;
+            width: 500px;
+            height: 150px;
+            padding-top: 70px;
+            margin-left: 480px;
+            margin-top: 80px;
+            text-align: center;
+            margin-top: 20px;
+            background-image: radial-gradient(rgb(26, 135, 182),rgb(8, 94, 147));
+        }
+
+        .button:hover {
+            transition-duration: 0.5s;
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const fixedID = "RIDHAMPOKIYA";
+            const fixedPassword = "9925499254";
+            const enteredID = document.getElementById("id").value;
+            const enteredPassword = document.getElementById("password").value;
+
+            if (enteredID === fixedID && enteredPassword === fixedPassword) {
+                window.location.replace("mainpage.html")
+                return false;
+            } else {
+                alert("Incorrect ID or password. Please try again.");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <img src="https://i.pinimg.com/originals/f4/cf/ec/f4cfec4f3b4bbf24798b26aa4a5508f2.png"
+        style="margin-left: 637px; margin-top: -270px; width: 200px; margin-top: 50px;">
+
+    <form action="https://www.w3schools.com/html/html_intro.asp" onsubmit="return validateForm()">
+        <div class="center">
+            <label for="id"><b>ID :</b></label>
+            <input type="text" id="id" name="id" placeholder="Enter your ID" required
+                style="text-align: center; margin-left: 47px;"><br>
+
+            <label for="password"><b>Password :</b></label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required
+                style="margin-top: 10px; text-align: center;"><br>
+
+            <button class="button" type="submit"
+                style="border-radius: 10px;  padding-left: 13px; padding-right: 13px; margin-top: 33px; cursor: pointer;">Login</button>
+                <a href="registration.html" style="display: block; text-decoration: none;  margin-top: 10px; margin-left: 400px; font-size: large; color: rgb(69, 193, 110);">Sign Up</a>
+
+        </div>
+    </form>
+</body>
+
+</html>
